@@ -1,0 +1,215 @@
+Command: /home/ICer/jishengli/2022Q4/uvm_q4/lin_bus/./simv +UVM_VERBOSITY=UVM_MEDIUM -l log/run.log -sml -cm line+tgl+branch -cm_name lin_tb_top_1 +ntb_random_seed=1 +UVM_TESTNAME=my_case0
+Chronologic VCS simulator copyright 1991-2018
+Contains Synopsys proprietary information.
+Compiler version O-2018.09-1_Full64; Runtime version O-2018.09-1_Full64;  Nov 22 16:15 2022
+UVM_INFO /home/synopsys/vcs-mx/O-2018.09-1/etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+Warning-[MON-RTCOVDGI] Runtime data generation ignored.
+  Your design is not instrumented for branch coverage.Runtime data will not be
+  generated.
+  Please instrument your design with -cm branch option during compilation.
+
+UVM_INFO @ 0: reporter [RNTST] Running test my_case0...
+*Verdi* Loading libsscore_vcs201809.so
+FSDB Dumper for VCS, Release Verdi_O-2018.09-SP2, Linux x86_64/64bit, 02/21/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'lin_tb_top.fsdb'
+*Verdi* : Begin traversing the scope (lin_tb_top), layer (0).
+*Verdi* : End of traversing.
+*Verdi* : Begin traversing the MDAs, layer (0).
+*Verdi* : Enable +mda and +packedmda dumping.
+*Verdi* : End of traversing the MDAs.
+VCD+ Writer O-2018.09-1_Full64 Copyright (c) 1991-2018 by Synopsys Inc.
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mon.sv(77) @ 0: uvm_test_top.env.agt.mon [lin_mon] print cfg
+------------------------------------------------------
+Name         Type                     Size  Value     
+------------------------------------------------------
+m_cfg[0]     lin_agt_cfg              -     @421      
+  is_active  uvm_active_passive_enum  1     UVM_ACTIVE
+  agt_type   type_e                   2     MASTER    
+------------------------------------------------------
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_base_test.sv(44) @ 0: uvm_test_top [my_case0] Printing the test topology:
+------------------------------------------------------------------------
+Name                             Type                        Size  Value
+------------------------------------------------------------------------
+uvm_test_top                     my_case0                    -     @392 
+  env                            lin_env                     -     @411 
+    agt                          lin_agt                     -     @427 
+      mon                        lin_mon                     -     @672 
+        mon_analysis_port_rx     uvm_analysis_port           -     @691 
+        mon_analysis_port_tx     uvm_analysis_port           -     @681 
+      mst                        lin_mst                     -     @709 
+        mon_analysis_port        uvm_analysis_port           -     @738 
+        rsp_port                 uvm_analysis_port           -     @728 
+        seq_item_port            uvm_seq_item_pull_port      -     @718 
+      sqr                        lin_sqr                     -     @748 
+        rsp_export               uvm_analysis_export         -     @757 
+        seq_item_export          uvm_seq_item_pull_imp       -     @875 
+        arbitration_queue        array                       0     -    
+        lock_queue               array                       0     -    
+        num_last_reqs            integral                    32    'd1  
+        num_last_rsps            integral                    32    'd1  
+    agt_ref_tx_fifo              uvm_tlm_analysis_fifo #(T)  -     @494 
+      analysis_export            uvm_analysis_imp            -     @543 
+      get_ap                     uvm_analysis_port           -     @533 
+      get_peek_export            uvm_get_peek_imp            -     @513 
+      put_ap                     uvm_analysis_port           -     @523 
+      put_export                 uvm_put_imp                 -     @503 
+    agt_scb_rx_fifo              uvm_tlm_analysis_fifo #(T)  -     @612 
+      analysis_export            uvm_analysis_imp            -     @661 
+      get_ap                     uvm_analysis_port           -     @651 
+      get_peek_export            uvm_get_peek_imp            -     @631 
+      put_ap                     uvm_analysis_port           -     @641 
+      put_export                 uvm_put_imp                 -     @621 
+    ref_scb_rx_fifo              uvm_tlm_analysis_fifo #(T)  -     @553 
+      analysis_export            uvm_analysis_imp            -     @602 
+      get_ap                     uvm_analysis_port           -     @592 
+      get_peek_export            uvm_get_peek_imp            -     @572 
+      put_ap                     uvm_analysis_port           -     @582 
+      put_export                 uvm_put_imp                 -     @562 
+    scb                          lin_scb                     -     @437 
+      monitor2scoboard_rx_port   uvm_blocking_get_port       -     @456 
+      monitor2scoboard_tx_port   uvm_blocking_get_port       -     @446 
+      refmodel2scoboard_rx_port  uvm_blocking_get_port       -     @476 
+      refmodel2scoboard_tx_port  uvm_blocking_get_port       -     @466 
+------------------------------------------------------------------------
+
+Stopping new assertion attempts at time 4000ps: level = 0 arg = * (from inst lin_tb_top.intf.agt_intf (/mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/interface/lin_agt_if.sv:37))
+Starting assertion attempts at time 12000ps: level = 0 arg = * (from inst lin_tb_top.intf.agt_intf (/mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/interface/lin_agt_if.sv:39))
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(128) @ 14000: uvm_test_top.env.agt.mst [lin_mst] --------------------------------------------------------------------------------------------------------
+Name                           Type          Size  Value                                                
+--------------------------------------------------------------------------------------------------------
+req                            lin_trans     -     @946                                                 
+  lin_break                    integral      5     'hd                                                  
+  sync                         integral      8     'h55                                                 
+  identifier                   integral      8     'hca                                                 
+  response_space               integral      32    'h5                                                  
+  data                         da(integral)  4     -                                                    
+    [0]                        integral      8     'h6d                                                 
+    [1]                        integral      8     'hc5                                                 
+    [2]                        integral      8     'h89                                                 
+    [3]                        integral      8     'h74                                                 
+  checksum                     integral      8     'hce                                                 
+  inter_byte_space             integral      8     'h1                                                  
+  data_lenth                   integral      4     'h4                                                  
+  fram_gap                     integral      4     'ha                                                  
+  data_type                    trans_type    32    unconditional_frame                                  
+  data_role                    trans_role    32    master_node                                          
+  begin_time                   time          64    14000                                                
+  depth                        int           32    'd3                                                  
+  parent sequence (name)       string        10    random_req                                           
+  parent sequence (full name)  string        53    uvm_test_top.env.agt.sqr.lin_base_sequence.random_req
+  sequencer                    string        24    uvm_test_top.env.agt.sqr                             
+--------------------------------------------------------------------------------------------------------
+
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(210) @ 292000: uvm_test_top.env.agt.mst [lin_mst] The identifier value is 10
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(246) @ 684000: uvm_test_top.env.agt.mst [lin_mst] The checksum_temp is 206
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(257) @ 756000: uvm_test_top.env.agt.mst [lin_mst] trans stop bit of checksum successful
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(261) @ 764000: uvm_test_top.env.agt.mst [lin_mst] The fram_gap is 10
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(367) @ 764000: uvm_test_top.env.agt.mst [lin_mst] release_bus....
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(367) @ 772000: uvm_test_top.env.agt.mst [lin_mst] release_bus....
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(367) @ 780000: uvm_test_top.env.agt.mst [lin_mst] release_bus....
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(367) @ 788000: uvm_test_top.env.agt.mst [lin_mst] release_bus....
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(367) @ 796000: uvm_test_top.env.agt.mst [lin_mst] release_bus....
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(367) @ 804000: uvm_test_top.env.agt.mst [lin_mst] release_bus....
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(367) @ 812000: uvm_test_top.env.agt.mst [lin_mst] release_bus....
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(367) @ 820000: uvm_test_top.env.agt.mst [lin_mst] release_bus....
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(367) @ 828000: uvm_test_top.env.agt.mst [lin_mst] release_bus....
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(367) @ 836000: uvm_test_top.env.agt.mst [lin_mst] release_bus....
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(128) @ 844000: uvm_test_top.env.agt.mst [lin_mst] --------------------------------------------------------------------------------------------------------
+Name                           Type          Size  Value                                                
+--------------------------------------------------------------------------------------------------------
+req                            lin_trans     -     @1049                                                
+  lin_break                    integral      5     'hd                                                  
+  sync                         integral      8     'h55                                                 
+  identifier                   integral      8     'hca                                                 
+  response_space               integral      32    'h5                                                  
+  data                         da(integral)  8     -                                                    
+    [0]                        integral      8     'ha7                                                 
+    [1]                        integral      8     'hac                                                 
+    [2]                        integral      8     'h15                                                 
+    [3]                        integral      8     'h12                                                 
+    [4]                        integral      8     'h50                                                 
+    [5]                        integral      8     'h14                                                 
+    [6]                        integral      8     'h22                                                 
+    [7]                        integral      8     'h64                                                 
+  checksum                     integral      8     'h99                                                 
+  inter_byte_space             integral      8     'h1                                                  
+  data_lenth                   integral      4     'h8                                                  
+  fram_gap                     integral      4     'h3                                                  
+  data_type                    trans_type    32    unconditional_frame                                  
+  data_role                    trans_role    32    master_node                                          
+  begin_time                   time          64    844000                                               
+  depth                        int           32    'd3                                                  
+  parent sequence (name)       string        10    random_req                                           
+  parent sequence (full name)  string        53    uvm_test_top.env.agt.sqr.lin_base_sequence.random_req
+  sequencer                    string        24    uvm_test_top.env.agt.sqr                             
+--------------------------------------------------------------------------------------------------------
+
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(210) @ 1116000: uvm_test_top.env.agt.mst [lin_mst] The identifier value is 10
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(246) @ 1860000: uvm_test_top.env.agt.mst [lin_mst] The checksum_temp is 153
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(257) @ 1932000: uvm_test_top.env.agt.mst [lin_mst] trans stop bit of checksum successful
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(261) @ 1940000: uvm_test_top.env.agt.mst [lin_mst] The fram_gap is  3
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(367) @ 1940000: uvm_test_top.env.agt.mst [lin_mst] release_bus....
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(367) @ 1948000: uvm_test_top.env.agt.mst [lin_mst] release_bus....
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/component/lin_mst.sv(367) @ 1956000: uvm_test_top.env.agt.mst [lin_mst] release_bus....
+UVM_INFO /mnt/hgfs/jishengli/sda2/ubutun/2022Q4/uvm_q4/lin/lin_bus/uvm/test_case/my_case0.sv(74) @ 2164000: uvm_test_top [uvm_test_top] mycase0 is begin
+UVM_INFO /home/synopsys/vcs-mx/O-2018.09-1/etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 2364000: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /home/synopsys/vcs-mx/O-2018.09-1/etc/uvm-1.2/base/uvm_report_server.svh(894) @ 2364000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   29
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[lin_mon]     1
+[lin_mst]    23
+[my_case0]     1
+[uvm_test_top]     1
+
+$finish called from file "/home/synopsys/vcs-mx/O-2018.09-1/etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time              2364000
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, tgl was monitored
+---------------------------------------------------------------------------
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 2364000 ps
+CPU Time:      0.360 seconds;       Data structure size:   0.6Mb
+Tue Nov 22 16:15:30 2022
