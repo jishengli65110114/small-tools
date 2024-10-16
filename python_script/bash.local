@@ -1,0 +1,10 @@
+#!/bin/bash
+alias g='gvim .'
+alias h='history'
+alias gg='cd ~'
+
+cd /home/jishengli
+
+
+alias my_python='python3 /home/jishengli/workspace/script/my_python.py'
+echo "finish run the config"
